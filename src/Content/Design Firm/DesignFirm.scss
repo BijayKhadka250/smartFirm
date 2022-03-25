@@ -11,7 +11,7 @@
   font-weight: bold;
   .design-card {
     margin: 30px auto 0px;
-    width: 45%;
+    width: 50%;
     justify-content: center;
     font-size: 15px;
     color: $leaderboards;
@@ -112,6 +112,7 @@
         border: none;
         background-color: $footerBackgroundColor;
       }
+
       .form-check-label {
         line-height: normal;
       }
