@@ -1,0 +1,11 @@
+.mobile-header {
+  display: none;
+}
+@media only screen and (max-width: 995px) {
+  .header {
+    display: none;
+  }
+  .mobile-header {
+    display: block;
+  }
+}

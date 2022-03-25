@@ -1,0 +1,11 @@
+@import "../../../global.scss";
+.home {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  bottom: 70px;
+  font-size: 25px;
+  text-align: center;
+  color: $redColor;
+  font-weight: bold;
+}

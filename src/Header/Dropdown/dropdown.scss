@@ -1,0 +1,40 @@
+@import "../../../global.scss";
+
+.dropdown {
+  .horiz-icon {
+    font-size: 30px;
+    color: $borderColor;
+    margin-top: 3px;
+  }
+  .dropdown-toggle {
+    background: none !important;
+    border: none;
+    color: inherit !important;
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .dropdown-toggle:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .dropdown-menu {
+    box-shadow: -3px 3px 5px $borderColor;
+    margin-top: 8px;
+
+    .dropdown-item {
+      padding-left: 25px;
+      .person-icon {
+        font-size: 20px;
+        padding-bottom: 3px;
+        color: $borderColor;
+      }
+      .help-icon {
+        @extend .person-icon;
+      }
+      .dropdown-text {
+        padding: 0px 0px 0px 7px;
+      }
+    }
+  }
+}

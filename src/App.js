@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useEffect } from "react";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
+import ContentController from "./Content/ContentController/ContentController";
+import { useLocation } from "react-router";
+import MobileHeader from "./Content/MobileHeader/MobileHeader";
+import "./App.scss";
 function App() {
+  let location = useLocation();
+  useEffect(() => {
+    let elementToRemove = document.querySelector(".active-route");
+    if (elementToRemove instanceof HTMLElement) {
+      elementToRemove.classList.remove("active-route");
+    }
+    if (location.pathname !== "/") {
+      let elementToAdd = document.querySelector(".active").parentNode;
+      elementToAdd.classList.add("active-route");
+    }
+  }, [location]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <MobileHeader />
+      <ContentController />
+      <Footer />
     </div>
   );
 }
