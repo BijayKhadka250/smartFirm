@@ -18,11 +18,11 @@ const MobileHeader = () => {
           <div className="logo-mobile">{home()}</div>
         </Col>
 
-        <Col xs={2}>
+        <Col xs={2} className="p-0">
           <MenuIcon className="hamburgar-icon" onClick={handleShow} />
         </Col>
 
-        <Col xs={2}>
+        <Col xs={2} className="p-0">
           <div className="dropdown-mobile">{dropDown()}</div>
         </Col>
       </Row>

@@ -27,12 +27,17 @@
     margin-top: 8px;
   }
   .dropdown-mobile {
-    margin-left: 10px;
+    // margin-left: 10px;
     margin-top: 3px;
+    text-align: right;
+    .dropdown-toggle{
+        
+        margin-right: 60px;
+    }
   }
 }
 
-$breakpoint-small: 500px;
+$breakpoint-small: 600px;
 @media (max-width: $breakpoint-small) {
   .mobile-header {
     .dropdown-mobile {
@@ -40,6 +45,15 @@ $breakpoint-small: 500px;
     }
     .logo-mobile {
       margin-left: 30px;
+    }
+  }
+}
+
+$breakpoint-extrasmall: 500px;
+@media (max-width: $breakpoint-extrasmall) {
+  .mobile-header {
+    .logo-mobile {
+      margin-left: 15px;
     }
   }
 }
